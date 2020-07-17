@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <style>
+ input{
+     width:150px;
+     height: 20px;
+     border-color: brown;
+ }
+ .box{
+     width: 400px;
+     border: 1px solid red;
+     margin:100px auto;
+    }
+     </style>
+</head>
+<body>
+<div class="box">
+    <label for="">
+        <img src="../img/close.png" id="tp">
+    </label>
+账号:<input type="text" value="请输入账号" id="zh">
+<br>
+密码:<input type="password" value="请输入密码" id="pwd">
+</div>
+<script>
+    var flag=0;
+     var tp=document.getElementById('tp');
+     var pwd=document.getElementById('pwd');
+//注册事件
+     tp.onclick=function () {
+         //点击一次之后flag一定要发生变化
+         if (flag == 0) {
+             pwd.type = 'text';
+              tp.src='../img/open.png';
+             flag=1;
+         }else {
+             pwd.type='password';
+             tp.src='../img/close.png';
+             flag=0;
+         }
+   }
+</script>
+
+</body>
+</html>

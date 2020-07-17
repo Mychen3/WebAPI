@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    img{
+      width: 100px;
+       height: 100px;
+   }
+    </style>
+    
+</head>
+<body>
+  <img src="../img/s.gif" alt="">
+  <div>上午好</div>
+  <script>
+  var img=document.querySelector('img');
+  var div=document.querySelector('div');
+
+   var date=new Date();
+   // 获取当前小时
+    var h=date.getHours();
+     if (h<12){
+         img.src='../img/s.gif';
+         div.innerHTML='上午好';
+     }
+     else if(h<18)
+     {
+       img.src='../img/x.gif';
+       div.innerHTML='下午好';
+     }
+     else if (h<24){
+         img.src='../img/w.gif';
+         div.innerHTML='晚上好';
+     }
+  </script>
+</body>
+</html>
